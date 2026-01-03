@@ -1,3 +1,3 @@
 .PHONY: build
 build:
-	@CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -o kindle-backer
+	@CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -o rekreate

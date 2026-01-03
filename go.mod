@@ -1,4 +1,4 @@
-module github.com/Sighery/kindle-backer
+module github.com/Sighery/rekreate
 
 go 1.25.4
 

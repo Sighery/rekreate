@@ -7,7 +7,7 @@
 *.dll
 *.so
 *.dylib
-kindle-backer
+rekreate
 
 # Test binary, built with `go test -c`
 *.test

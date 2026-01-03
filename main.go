@@ -239,7 +239,7 @@ func backup(docExc globExclusion, collExc exclusion) error {
 	// Package the export
 	log.Println("Readying the export...")
 	currentTime := time.Now()
-	exportFile := "kindle-backer_" + currentTime.Format(TimestampFormat) + ".tar.gz"
+	exportFile := "rekreate_" + currentTime.Format(TimestampFormat) + ".tar.gz"
 
 	if err = tarExport.Close(); err != nil {
 		return fmt.Errorf("Failed to close tar export: %w", err)
@@ -277,7 +277,7 @@ func enhanceDocumentsExclusion(docExc *globExclusion, useDefault bool) error {
 func restore(documents, db, thumbnails bool, exportPath string) error {
 	// Create temporary directory for import data
 	log.Println("Creating temporary import directory...")
-	dname, err := os.MkdirTemp(".", ".kindlebacker")
+	dname, err := os.MkdirTemp(".", ".rekreate")
 	if err != nil {
 		return fmt.Errorf("Failed to create temp dir: %w", err)
 	}
