@@ -39,7 +39,7 @@ it run and don't cancel it. If `WARN` logs are printed, you may ignore them.
 With default options, back up everything:
 
 ```sh
-$ ./rekreate
+$ ./rekreate backup
 2026/01/03 23:01:57 Creating temporary export directory...
 2026/01/03 23:01:57 Exporting content catalogue partial DB...
 2026/01/03 23:02:04 Exporting thumbnails...
@@ -56,7 +56,7 @@ shell expansion:
 # 1. Ignore a whole directory
 # 2. Ignore a specific file
 # 3. Ignore a specific book and its sidecar (important to keep extension open)
-$ ./rekreate \
+$ ./rekreate backup \
 --excludepath 'documents/Dick, Philip_K/' \
 --excludepath 'documents/KUAL.kual' \
 --excludepath 'documents/Scott, Lynch/Lies of Locke Lamora, The - Scott Lynch.*'
@@ -82,13 +82,13 @@ Collections can be excluded with `-excludecollection` option, which can be
 passed multiple times. These are a case-insensitive match:
 
 ```sh
-$ ./rekreate --excludecollection dev --excludecollection 'Gentleman Bastard'
+$ ./rekreate backup --excludecollection dev --excludecollection 'Gentleman Bastard'
 ```
 
 All together:
 
 ```sh
-$ ./rekreate \
+$ ./rekreate backup \
 --no-default-path-exclusions \
 --excludepath 'documents/custom_book.*' --excludepath 'documents/dictionaries/' \
 --excludecollection dev --excludecollection sprawl --excludecollection 'abc 1'
